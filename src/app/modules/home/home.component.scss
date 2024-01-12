@@ -1,3 +1,12 @@
+.heading {
+  color: #060F82;
+  font-family: Arial;
+  font-size: 31px;
+  position: absolute;
+  top: 61px;
+  font-weight: bold;
+}
+
 .snip1563 {
   background-color: #a1a1a1;
   color: #ffffff;
@@ -23,6 +32,8 @@
 .snip1563 img {
   backface-visibility: hidden;
   max-width: 100%;
+  min-height: 100%;
+  max-height: 100%;
   /* vertial-align: top; */
 }
 
@@ -151,6 +162,6 @@ p {
   font-size: 25px;
   position: relative;
   top: 50%;
-  left: 70%;
+  left: 80%;
   transform: translate(-50%, -50%);
 }

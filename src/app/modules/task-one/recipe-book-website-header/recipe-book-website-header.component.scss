@@ -1,0 +1,10 @@
+.input-group {
+  box-shadow: rgba(28, 28, 28, 0.08) 0px 2px 8px;
+}
+
+@media screen and (max-width: 768px) {
+  .justify-content-center {
+    justify-content: flex-end !important;
+  }
+}
+

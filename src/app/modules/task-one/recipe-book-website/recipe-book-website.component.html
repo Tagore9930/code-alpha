@@ -1,0 +1,264 @@
+<div class="recipe h-auto bg-white">
+  <app-recipe-book-website-header></app-recipe-book-website-header>
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <p class="location">Home / India / <span>Bengaluru Restaurants</span></p>
+        <ul class="nav categories">
+          <li class="d-flex align-items-center pe-auto px-2 categories-active">
+            <div class="categories-images p-3 m-2 rounded-circle">
+              <img src="/assets/task-1-images/categories/img-1.jpg" class="w-100">
+            </div>
+            <span class="categories-title fs-5 fw-semibold">Delivery</span>
+          </li>
+          <li class="d-flex align-items-center pe-auto px-2">
+            <div class="categories-images p-3 m-2 rounded-circle">
+              <img src="/assets/task-1-images/categories/img-2.jpg" class="w-100">
+            </div>
+            <span class="categories-title fs-5 fw-semibold">Dining Out</span>
+          </li>
+          <li class="d-flex align-items-center pe-auto px-2">
+            <div class="categories-images p-3 m-2 rounded-circle">
+              <img src="/assets/task-1-images/categories/img-3.jpg" class="w-100">
+            </div>
+            <span class="categories-title fs-5 fw-semibold">Nightlife</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <hr class="m-0">
+  <div class="container">
+    <div class="row my-4">
+      <div class="col-12">
+        <ul class="nav">
+          <li class="btn btn-outline-secondary m-2">
+            <i class="bi bi-funnel"></i>
+            <span>Filters</span>
+          </li>
+          <li class="btn btn-outline-secondary m-2">
+            <span>Rating: 4.0+</span>
+          </li>
+          <li class="btn btn-outline-secondary m-2">
+            <span>Pure Veg</span>
+          </li>
+          <div class="dropdown">
+            <li class="btn btn-outline-secondary m-2 dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+              <span>Cuisines</span>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+          </div>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="first-order py-4">
+    <div class="container">
+      <h3 class="fw-normal fs-4">Inspiration for your first order</h3>
+      <div class="items-container pb-5">
+        <div class="item p-2 pt-4 pe-auto" *ngFor="let item of firstOrder">
+          <img src="{{item.img}}" class="w-100 rounded-circle shadow">
+          <p class="fs-5 fw-semibold text-center">{{item.title}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="top-brands bg-white py-5">
+      <h3 class="fw-normal fs-4">Top brands for you</h3>
+      <div class="items-container">
+        <div class="item p-2 pt-4 pe-auto" *ngFor="let item of topBrands">
+          <img src="{{item.img}}" class="w-100 h-100 rounded-4 shadow">
+          <p class="fw-semibold text-center mb-0 mt-3">{{item.title}}</p>
+          <p class="text-center time mb-0">19 min</p>
+        </div>
+      </div>
+    </div>
+    <div class="best-foods">
+      <h3 class="fw-normal fs-4">Best Food in Bengaluru</h3>
+      <div class="row">
+        <div class="col-lg-4 col-md-6 p-3" *ngFor="let item of bestFoods">
+          <div class="card rounded-4 shadow border-0 pe-auto">
+            <div class="ribbon">
+              <b>{{item?.offer}} OFF</b>
+            </div>
+            <div class="card-image rounded-4 m-3 overflow-hidden">
+              <img src="{{item?.img}}" class="w-100">
+            </div>
+            <div class="card-body pt-0">
+              <h5 class="title d-flex justify-content-between">
+                <span class="fs-5 name w-75">{{item?.title}} </span>
+                <span class="fs-12 fw-bold bg-success p-1 rounded-1 text-white">{{item.rating}} &#9733;</span>
+              </h5>
+              <p class="location d-flex justify-content-between m-0">
+                <span class="location-text fs-6 w-75">{{item?.location}}</span>
+                <span class="text-black">₹{{item?.amount}}</span>
+              </p>
+              <p class="fs-12 text-end m-0">{{item?.time}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="explore-options-near-me py-4">
+    <div class="container">
+      <h3 class="mx-3 my-3 fs-2">Explore options near me</h3>
+      <div class="row my-3">
+        <div class="col-12">
+          <mat-accordion>
+            <mat-expansion-panel class="bg-white mx-3">
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  <span class="fs-4 fw-normal py-2">Popular cuisines near me</span>
+                </mat-panel-title>
+              </mat-expansion-panel-header>
+              <section>
+                <ul class="row flex-wrap">
+                  <li class="col-md-3 px-3 lh-lg text-black-50" *ngFor="let item of popularCuisines">{{item?.name}}</li>
+                </ul>
+              </section>
+            </mat-expansion-panel>
+          </mat-accordion>
+        </div>
+      </div>
+      <div class="row my-3">
+        <div class="col-12">
+          <mat-accordion>
+            <mat-expansion-panel class="bg-white mx-3">
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  <span class="fs-4 fw-normal py-2">Popular restaurant types near me</span>
+                </mat-panel-title>
+              </mat-expansion-panel-header>
+              <section>
+                <ul class="row flex-wrap">
+                  <li class="col-md-3 col-12 mx-3 lh-lg text-black-50" *ngFor="let item of popularRestaurant">{{item?.name}}</li>
+                </ul>
+              </section>
+            </mat-expansion-panel>
+          </mat-accordion>
+        </div>
+      </div>
+      <div class="row my-3">
+        <div class="col-12">
+          <mat-accordion>
+            <mat-expansion-panel class="bg-white mx-3">
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  <span class="fs-4 fw-normal py-2">Top Restaurant Chains</span>
+                </mat-panel-title>
+              </mat-expansion-panel-header>
+              <section>
+                <ul class="nav row">
+                  <li class="col-lg-2 col-12 mx-3 lh-lg text-black-50 col-2">Biryani Blues</li>
+                  <li class="col-lg-2 col-12 mx-3 lh-lg text-black-50 col-2">Burger King</li>
+                  <li class="col-lg-2 col-12 mx-3 lh-lg text-black-50 col-2">Domino's</li>
+                  <li class="col-lg-2 col-12 mx-3 lh-lg text-black-50 col-2">KFC</li>
+                  <li class="col-lg-2 col-12 mx-3 lh-lg text-black-50 col-2">Krispy Kreme</li>
+                </ul>
+              </section>
+            </mat-expansion-panel>
+          </mat-accordion>
+        </div>
+      </div>
+      <div class="row my-3">
+        <div class="col-12">
+          <mat-accordion>
+            <mat-expansion-panel class="bg-white mx-3">
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  <span class="fs-4 fw-normal py-2">Bengaluru city We Deliver To</span>
+                </mat-panel-title>
+              </mat-expansion-panel-header>
+              <section>
+                <ul class="nav row">
+                  <li class="col-lg-2 mx-3 lh-lg text-black-50" *ngFor="let item of cities">{{item?.city}}</li>
+                </ul>
+              </section>
+            </mat-expansion-panel>
+          </mat-accordion>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="px-3 py-3 d-none d-md-block">
+    <div class="d-flex justify-content-between">
+      <div>
+        <p class="fs-4 fw-bold m-0">Food Delivery</p>
+        <ul class="nav my-3">
+          <li class="mx-2 pe-auto link-h text-uppercase fs-4">
+            <i class="bi bi-youtube text-danger"></i>
+          </li>
+          <li class="mx-2 pe-auto link-h text-uppercase fs-4">
+            <i class="bi bi-linkedin text-primary"></i>
+          </li>
+          <li class="mx-2 pe-auto link-h text-uppercase fs-4">
+            <i class="bi bi-whatsapp text-success"></i>
+          </li>
+          <li class="mx-2 pe-auto link-h text-uppercase fs-4">
+            <i class="bi bi-facebook text-primary"></i>
+          </li>
+        </ul>
+        <span class=" link-h"> © fooddelivery@gmail.com</span>
+      </div>
+      <ul class="nav d-block ">
+        <p class="fw-bold mb-0">About Food Delivery :</p>
+        <li class="my-2">Home</li>
+        <li class="my-2">Delivery Areas</li>
+        <li class="my-2">Careers</li>
+        <li class="my-2">Customer Support</li>
+        <li class="my-2">Press</li>
+      </ul>
+      <div>
+        <p class="fw-bold mb-0">We deliver to:</p>
+        <ul class="nav d-block ">
+          <li class="my-2">Bangalore</li>
+          <li class="my-2">Gurgaon</li>
+          <li class="my-2">Hyderabad</li>
+          <li class="my-2">Delhi</li>
+          <li class="my-2">Mumbai</li>
+        </ul>
+      </div>
+      <ul class="nav d-block ">
+        <p class="fw-bold mb-0">Learn More:</p>
+        <li class="my-2">Privacy Policy</li>
+        <li class="my-2">Terms of Use</li>
+        <li class="my-2">Responsible Disclosure Policy</li>
+        <li class="my-2">Mojo - a Zepto Blog</li>
+      </ul>
+
+    </div>
+    <hr class=" border-2">
+
+    <p>By continuing past this page, you agree to our Terms of Service, Cookie Policy, Privacy Policy
+      and Content Policies. All trademarks are properties of their respective owners. 2008-2023 © Food Delivery™ Ltd. All
+      rights reserved.</p>
+  </footer>
+
+  <footer class="mobile-screen d-md-none bg-white w-100 border-top">
+    <ul class="nav justify-content-around align-items-center w-100">
+      <li class="item px-2 py-1 pt-2 active">
+        <mat-icon>view_module</mat-icon>
+        <p class="text mb-0">Menu</p>
+      </li>
+      <li class="item px-2 py-1 pt-2">
+        <mat-icon>favorite_border</mat-icon>
+        <p class="text mb-0">Favorites</p>
+      </li>
+      <li class="item px-2 py-1 pt-2">
+        <mat-icon>list_alt</mat-icon>
+        <p class="text mb-0">List</p>
+      </li>
+      <li class="item px-2 py-1 pt-2">
+        <mat-icon>person_outline</mat-icon>
+        <p class="text mb-0">Profile</p>
+      </li>
+    </ul>
+  </footer>
+</div>
