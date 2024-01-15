@@ -1,0 +1,53 @@
+.social-media {
+  background: #f4f2ee;
+}
+
+.fs-12 {
+  font-size: 12px;
+}
+
+.fs-10 {
+  font-size: 10px;
+}
+
+.show-more:hover {
+  background-color: lightgray;
+}
+
+.profile-img {
+  position: absolute;
+  top: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.sort {
+  height: 20px;
+
+  .sort-hr {
+    position: absolute;
+    top: 10px;
+    width: 85%;
+  }
+
+  .sort-text {
+    float: inline-end;
+    // padding-right: 60px;
+  }
+}
+
+.text-overflow-hide {
+  white-space: nowrap;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+}
+
+.btn-h:hover {
+  background-color: #f4f2ee;
+}
+
+@media screen and (max-width: 768px) {
+  .profile-img {
+    top: 70px;
+  }
+}

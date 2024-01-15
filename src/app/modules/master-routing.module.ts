@@ -9,7 +9,11 @@ const routes: Routes = [
   {
     path: 'task-1',
     loadChildren: () => import("./task-one/task-one.module").then((m) => m.TaskOneModule)
-  }
+  },
+  {
+    path: 'task-2',
+    loadChildren: () => import("./task-two/task-two.module").then((m) => m.TaskTwoModule)
+  },
 ];
 
 @NgModule({
