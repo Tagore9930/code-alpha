@@ -1,0 +1,50 @@
+<div class="issue-tracker">
+  <div class="h-inherit px-0">
+    <div class="d-flex h-inherit">
+      <div class="sidebar p-0" *ngIf="screenWidth > 575">
+        <app-issue-tracker-sidebar (sidebarEventEmitter)="changeSidebar($event)"></app-issue-tracker-sidebar>
+      </div>
+      <div class="sidebar p-0 close" *ngIf="screenWidth < 575">
+        <app-issue-tracker-sidebar (sidebarEventEmitter)="changeSidebar($event)"></app-issue-tracker-sidebar>
+      </div>
+      <div class="p-0 w-100 position-relative">
+        <app-issue-tracker-header (sidebarEventEmitter)="changeSidebar($event)"></app-issue-tracker-header>
+
+
+        <div class="mt-5 position-absolute top-0 w-100">
+          <div class="card border-0 rounded-1 mx-3">
+            <div class="card-body py-2">
+              <h3 class="m-0 fw-medium">All Issues</h3>
+            </div>
+          </div>
+        </div>
+        <div class="row section h-inherit">
+          <div class="col-12">
+            <div class="card border-0 mx-1 rounded-2 p-3">
+              <form>
+                <h2>Add New Issue</h2>
+                <div class="my-2">
+                  <label class="form-label">Description</label>
+                  <input type="text" class="form-control inputs" placeholder="Describe the issue...">
+                </div>
+                <div class="my-2">
+                  <label class="form-label">Severity</label>
+                  <select class="form-select inputs">
+                    <option selected value="Low">Low</option>
+                    <option value="Normal">Normal</option>
+                    <option value="High">High</option>
+                  </select>
+                </div>
+                <div class="my-2">
+                  <label class="form-label">Assigned To</label>
+                  <input type="text" class="form-control inputs" placeholder="Enter responsible...">
+                </div>
+                <button type="submit" class="btn btn-primary" (click)="$event.preventDefault()">Submit</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

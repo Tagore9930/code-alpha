@@ -1,0 +1,21 @@
+.issue-tracker-sidebar {
+  overflow: hidden;
+}
+
+.list {
+  list-style: none;
+}
+
+li {
+  color: gray;
+
+  &:hover:not(li.heading) {
+    color: #0053CD;
+    background-color: rgb(235, 235, 235);
+  }
+}
+
+.active {
+  color: #0053CD;
+  background-color: rgb(235, 235, 235);
+}

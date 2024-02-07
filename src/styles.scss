@@ -24,5 +24,9 @@ html, body {
   text-decoration: underline;
 }
 
-html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+app-root, app-issue-tracker, .issue-tracker, .h-inherit {
+  display: block;
+  height: inherit;
+}
